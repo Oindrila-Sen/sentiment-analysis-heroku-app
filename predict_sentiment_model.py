@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
-nltk.data.path.append('./nltk_data/')
+#nltk.data.path.append('./nltk_data/')
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier

@@ -18,9 +18,9 @@ from joblib import load
 from wordcloud import WordCloud
 import re
 
-#import nltk
+import nltk
 #nltk.data.path.append('./nltk_data/')
-#from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 # To sort dictionary values
 import operator 
 ## Preprocessing
@@ -165,9 +165,9 @@ def data_cleaning(df_tweets):
     # Remove URLS
     df_tweets['clean_text'] = df_tweets['clean_text'].apply(lambda x: re.split('https:\/\/.*', str(x))[0])
     # remove stop words
-    #stop = stopwords.words('english')
-    #stop.extend(["amp","https","co","rt","new","let","also","still","one","people","gt"])
-    #df_tweets['clean_text'] =  df_tweets['clean_text'].apply(lambda x: " ".join(x for x in x.split() if x not in stop ))
+    stop = stopwords.words('english')
+    stop.extend(["amp","https","co","rt","new","let","also","still","one","people","gt"])
+    df_tweets['clean_text'] =  df_tweets['clean_text'].apply(lambda x: " ".join(x for x in x.split() if x not in stop ))
 
     # Remove Text Column
     del df_tweets['tweets']
