@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+</head>
+<title>Twitter - Get tweets for a Hashtag</title>
+<div style="overflow-y: auto; float:left;">
+<h2>Twitter - Get tweets for a Hashtag and Predicted Emotion</h2>
+
+<p>Take a Look at the top 50 tweets for the hashtag.Please scroll down to check all the 50 tweets:</p>
+<p>
+<div style="height:350px; overflow-y: scroll; float:left;">
+{{ table|safe }}
+</div>
+<p>
+<br>
+<p>
+<br>
+<p>
+<!--h3>Positive Vs Negative Sentiment</h3-->
+<br>
+<!--img src="{{url_for('plot_png')}}"-->
+<!--img src="/plot.png" align = "middle" -->
+<br>
+<p align = center><b>Thank You!</b></p>
+<p align = center><b>-- Created By Oindrila Sen--</b></p>
+</body>
+</html>
+</doctype>
+
